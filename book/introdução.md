@@ -1,7 +1,7 @@
 <!-- TODO: ler novamente e criar rodapés quando achar interessante -->
 
 
-# Bem-vindo
+# Introdução
 
 Bem-vindo ao **C++ do Zero**, um livro feito em [Markdown](https://pt.wikipedia.org/wiki/Markdown) sobre [C++](https://pt.wikipedia.org/wiki/C%2B%2B). Embora o título desta obra implique uma jornada de começo a fim sobre a linguagem, na realidade, esse livro possui três principais objetivos, dependendo do leitor:
 
@@ -13,7 +13,15 @@ Bem-vindo ao **C++ do Zero**, um livro feito em [Markdown](https://pt.wikipedia.
 3. *Fornecer recursos para se aprofundar na linguagem*: Caso você já saiba C++, pode também procurar se aprofundar na linguagem, já que a mesma é consideravelmente grande em muitos sentidos. Nunca se sabe quando podemos aprender algo novo. E quando pensamos já saber algo, perdemos a oportunidade de entender melhor.
 
 
-
-
 > *“O maior inimigo do conhecimento não é a ignorância, é a ilusão do conhecimento.”
 > \- Stephen Hawking.*
+
+
+
+
+
+<br><br>
+
+- [Começar do Zero](./programação%20do%20zero/ponto%20de%20entrada.md)
+- [Índice](./índice.md)
+- [README](../README.md)
