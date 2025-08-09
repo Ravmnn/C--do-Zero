@@ -81,7 +81,12 @@ Resumindo: Ou o código fonte é transformado em código de máquina, ou ele é 
 
 <!-- TODO: add more content -->
 
-Voltando às linguagens, temos muitas opções. Hoje em dia, há dúzias e dúzias de diversas linguagens de programação com estilos e propósitos diferentes. Há, também, linguagens que não foram feitas para programar, mas sim para estruturar dados, entre outros. Como já deve ter percebido, esse livro tem como protagonista a linguagem C++. Não sei como você veio parar aqui, nem por que escolheu C++ como a primeira linguagem. Como já disse na [Introdução](./introdução.md), não é a melhor das escolhas escolhê-la como seu ponto de entrada nesse maravilhoso mundo, devido às suas complexidades que tendem a se tornar obstáculos extras para iniciantes. Todavia, também é sem sentido ter medo de algo que nunca viu, nem experimentou.
+Você talvez já tenha percebido ao ler as várias frases desse livro: Não existe uma, duas ou três linguagens de programação, hoje em dia, há dúzias e dúzias de diversas linguagens com estilos e propósitos diferentes. Há, também, linguagens que não foram feitas para programar, mas sim para estruturar dados, entre outros. Para citar algumas, com propósito de exemplificação:
+- *Python*, uma das mais populares, com foco em praticidade. Em ocasiões usuais, seria uma das linguagens mais favoritas entre os iniciantes nesse ramo.
+- *Javascript*, criado para desenvolvimento de páginas web, embora seja utilizado mais amplamente em outros lugares, como no desenvolvimento de aplicações desktop.
+- *C#*, criado pela Microsoft para o desenvolvimento de aplicações sob o framework[^2] .NET, também da mesma empresa.
+
+Como já deve ter percebido, esse livro tem como protagonista a linguagem C++. Não sei como você veio parar aqui, nem por que escolheu C++ como a primeira linguagem. Como já disse na [Introdução](./introdução.md), não é a melhor das escolhas como seu ponto de entrada nesse maravilhoso mundo, devido às suas complexidades que tendem a se tornar obstáculos extras para iniciantes. Todavia, também é sem sentido ter medo de algo que nunca viu, nem experimentou.
 
 
 
@@ -100,14 +105,17 @@ Por isso, aprender, nem que seja um pouco, a lógica de programação, pode faci
 
 ## 2.2: Fundamentos
 
-Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^2]*.
+Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^3]*.
 
+***Em desenvolvimento...***
 
 
 
 
 
 # 3: C++
+
+***Em desenvolvimento...***
 
 
 
@@ -116,4 +124,8 @@ Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^2]*.
 [^1]: Muitas pessoas acham que um compilador, na verdade, transforma código de uma linguagem em código de máquina. Isso não é verdade. Um compilador transforma algo em outro. Embora seja possível compilar para Assembly e, em seguida, código de máquina, através de um Assembler. Compilar diretamente para código de máquina não é impossível, mas certamente um desafio e não recomendável.
 
 
-[^2]: *Pseudo* (do grego, pseudes), é um prefixo muito utilizado em muitas palavras. Significa algo falso, fingido; uma mentira. Nesse caso, pseudo linguagem, significaria linguagem falsa, que não existe de fato.
+
+[^2]: Um framework é um conjunto de ferramentas, serviços e bibliotecas com o propósito de auxiliar no desenvolvimento de algo.
+
+
+[^3]: *Pseudo* (do grego, pseudes), é um prefixo muito utilizado em muitas palavras. Significa algo falso, fingido; uma mentira. Nesse caso, pseudo linguagem, significaria linguagem falsa, que não existe de fato.
