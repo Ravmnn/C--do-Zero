@@ -12,6 +12,7 @@
 - [2: Lógica de Programação](#2-lógica-de-programação)
   - [2.1: Importância](#21-importância)
   - [2.2: Fundamentos](#22-fundamentos)
+    - [2.2.1: Tipos de Dados Primitivos:](#221-tipos-de-dados-primitivos)
 
 
 
@@ -30,10 +31,34 @@ Por isso, aprender, nem que seja um pouco, a lógica de programação, pode faci
 
 ## 2.2: Fundamentos
 
-Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^1]*.
+Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^1]*. Para não ficar chamando-a de "pseudo linguagem" toda hora que me referir à linguagem de demonstração específica desse livro, vou nomeá-la de "Psec" (lê-se "Piseq")
 
-***Em desenvolvimento...***
 
+
+### 2.2.1: Tipos de Dados Primitivos:
+
+Números são incríveis. Por que?... Computadores entendem apenas duas coisas: números e números. Isso significa que, se queremos representar algo que não possa ser representado por um número (como um texto), devemos dar um jeito de fazer o mesmo conseguir ser representado por um. As cores que você enxerga em uma tela, o texto desse livro, os vários elementos que um jogo pode ter, a interface gráfica de um sistema operacional... Todas essas coisas são representadas internamente por números, mesmo que não pareça. Mais uma pergunta pra você, use alguns segundos da sua vida para pensar em uma resposta: Como você representaria o texto `pedra` usando apenas números?
+
+Se sua resposta foi algo como "Criar uma tabela em que cada número representa uma letra do alfabeto", parabéns, você pensa como um computador. Não podemos representar letras diretamente em um computador, mas podemos usar uma alternativa inteligente e mapear cada caractere do alfabeto à um número. Essa é a abordagem utilizada por todos os computadores internacionalmente para representar letras e textos. [ASCII](https://pt.wikipedia.org/wiki/ASCII) (*American Standard Code for Information Interchange* ou *Código Padrão Americano para o Intercâmbio de Informação*, em português) é uma tabela que mapeia todos os caracteres comuns[^2] latinos à um número. Utilizando esse princípio, o texto da pergunta feita acima poderia ser representado da seguinte maneira, utilizando ASCII:
+
+
+```
+p   e   d   r   a
+112 101 100 114 97
+```
+
+
+Cores também são representadas utilizando uma combinação de números, sendo o principal formato o [RGB](https://pt.wikipedia.org/wiki/RGB) (Red, Green, Blue), onde a combinação de diferentes intensidades da cor vermelha, verde e azul conseguem resultar em uma quantidade astronômica de cores.
+
+Embora tudo em um computador seja representado por números, linguagens de programação atribuem à um valor um tipo específico. Isso é importante porque, se não houvesse uma forma de saber com que tipo de valor estamos trabalhando ao criar um programa, poderíamos acabar tratando um caractere como se fosse um número comum. Imagine o caos que somar dois caracteres poderia causar. Por exemplo, no famoso jogo Minecraft, não podemos tratar um animal como um bloco. Da mesma forma, não podemos tratar um número como se fosse um texto[^3], embora ambos sejam números por baixo dos panos.
+Os tipos de dados que uma linguagem possui depende dela, embora seja quase certo que toda linguagem possua os seguintes tipos:
+
+- Integer: Representa um número inteiro, que não possui vírgula, como `10`, `123`, `7`, `-3`, `0`. Geralmente, o nome desse tipo é abreviado para `int`.
+- Float: Representa um número que possui vírgula[^4], como `10.123`, `3.14159`, `-0.0825`
+- Boolean: Representa valores lógicos que podem ser `true` (verdadeiro) ou `false` (falso). É utilizado para expressar condições. Por exemplo, `o número 4 é igual à soma 2 + 2?` resultaria em `true`.
+- String: Representa texto. Textos em linguagens de programação são colocados entre aspas `"`. Algumas usam aspas simples `'` também. Exemplo: `"Isso é literalmente um texto"`.
+
+*<small>Note que os nomes dos tipos estão em inglês propositalmente. Elas estarão assim também em todas as linguagens.</small>*
 
 
 
@@ -49,4 +74,14 @@ Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^1]*.
 
 
 
-[^1]: *Pseudo* (do grego, pseudes), é um prefixo muito utilizado em muitas palavras. Significa algo falso, fingido; uma mentira. Nesse caso, pseudo linguagem, significaria linguagem falsa, que não existe de fato.
+[^1]: *Pseudo* (do grego, pseudes), é um prefixo muito utilizado em muitas palavras. Significa algo falso, fingido; uma mentira. Nesse caso, pseudo linguagem, significaria linguagem falsa, que não existe de fato. Uma pseudo linguagem serve apenas para demonstrar código.
+
+
+[^2]: ASCII encobre um total de 255 caracteres possíveis. No entanto, vivemos em um mundo onde o alfabeto latino não é o único. Temos uma quantidade espetacular de alfabetos diferentes, cada um contendo uma quantidade variável de caracteres. Para resolver o problema de que não seria possível mapear todos os alfabetos do mundo pelo ASCII, foi criado o [Unicode](https://home.unicode.org/), uma tabela mais universal com o objetivo de tornar possível a utilização de todos os alfabetos do mundo em um computador.
+
+
+[^3]: Sabia que os números que estão no teclado do seu computador são tratados como texto, e não números de fato?
+
+
+[^4]: Na maioria das linguagens, a vírgula de um número fracionário é representado por um ponto `.`.
+
