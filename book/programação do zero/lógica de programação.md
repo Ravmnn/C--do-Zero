@@ -13,6 +13,7 @@
   - [2.1: Importância](#21-importância)
   - [2.2: Fundamentos](#22-fundamentos)
     - [2.2.1: Tipos de Dados Primitivos:](#221-tipos-de-dados-primitivos)
+    - [2.2.2: Expressões](#222-expressões)
 
 
 
@@ -31,7 +32,8 @@ Por isso, aprender, nem que seja um pouco, a lógica de programação, pode faci
 
 ## 2.2: Fundamentos
 
-Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^1]*. Para não ficar chamando-a de "pseudo linguagem" toda hora que me referir à linguagem de demonstração específica desse livro, vou nomeá-la de "Psec" (lê-se "Piseq")
+Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^1]*. Para não ficar chamando-a de "pseudo linguagem" toda hora que me referir à linguagem de demonstração específica desse livro, vou nomeá-la de "Psec" (lê-se "Piseq").
+Durante esse capítulo, vou utilizar bastante frases como "linguagens de programação ..." ou "toda linguagem de programação ..." com o intuito de englobar a **maioria** das linguagens de programação, já que pode haver alguma que não se encaixa na afirmação seguinte.
 
 
 
@@ -50,15 +52,47 @@ p   e   d   r   a
 
 Cores também são representadas utilizando uma combinação de números, sendo o principal formato o [RGB](https://pt.wikipedia.org/wiki/RGB) (Red, Green, Blue), onde a combinação de diferentes intensidades da cor vermelha, verde e azul conseguem resultar em uma quantidade astronômica de cores.
 
-Embora tudo em um computador seja representado por números, linguagens de programação atribuem à um valor um tipo específico. Isso é importante porque, se não houvesse uma forma de saber com que tipo de valor estamos trabalhando ao criar um programa, poderíamos acabar tratando um caractere como se fosse um número comum. Imagine o caos que somar dois caracteres poderia causar. Por exemplo, no famoso jogo Minecraft, não podemos tratar um animal como um bloco. Da mesma forma, não podemos tratar um número como se fosse um texto[^3], embora ambos sejam números por baixo dos panos.
+Embora tudo em um computador seja representado por números, linguagens de programação atribuem à um valor um tipo específico. Isso é importante porque, se não houvesse uma forma de saber com que tipo de valor estamos trabalhando ao criar um programa, poderíamos acabar tratando um caractere como se fosse um número comum. Imagine o caos que somar dois caracteres, pensando serem números comuns, poderia causar. Por exemplo, no famoso jogo Minecraft, não podemos tratar um animal como um bloco. Da mesma forma, não podemos tratar um número como se fosse um texto[^3], embora ambos sejam números por baixo dos panos.
 Os tipos de dados que uma linguagem possui depende dela, embora seja quase certo que toda linguagem possua os seguintes tipos:
 
 - Integer: Representa um número inteiro, que não possui vírgula, como `10`, `123`, `7`, `-3`, `0`. Geralmente, o nome desse tipo é abreviado para `int`.
 - Float: Representa um número que possui vírgula[^4], como `10.123`, `3.14159`, `-0.0825`
-- Boolean: Representa valores lógicos que podem ser `true` (verdadeiro) ou `false` (falso). É utilizado para expressar condições. Por exemplo, `o número 4 é igual à soma 2 + 2?` resultaria em `true`.
+- Boolean: Representa valores lógicos que podem ser `true` (verdadeiro) ou `false` (falso). É utilizado para expressar condições. Por exemplo, `o número 4 é igual à soma 2 + 2?` resultaria em `true`. Geralmente abreviado para `bool`.
 - String: Representa texto. Textos em linguagens de programação são colocados entre aspas `"`. Algumas usam aspas simples `'` também. Exemplo: `"Isso é literalmente um texto"`.
 
-*<small>Note que os nomes dos tipos estão em inglês propositalmente. Elas estarão assim também em todas as linguagens.</small>*
+*<small>Note que os nomes dos tipos estão em inglês propositalmente. Elas estarão assim também em praticamente todas as linguagens.</small>*
+
+Esses tipos de dados são chamados de *primitivos* porque é possível criar outros tipos de dados juntando eles. Toda linguagem de programação possui algum mecanismo que permita a criação de novos tipos. Esse recurso será abordado melhor mais à frente.
+
+
+
+### 2.2.2: Expressões
+
+Em uma linguagem de programação, *expressão* é tudo aquilo que gera um resultado. Por exemplo, a soma de dois números é uma expressão, pois gera um resultado final. A maioria das expressões utilizam *operadores*, que são identificadores que determinam que tipo de expressão está sendo executada, e *operandos*, que são os valores que serão processados de alguma forma. Bons exemplos de uma expressão seriam cálculos aritméticos:
+
+<!-- TODO: falar sobre precedência -->
+<!-- TODO: falar sobre expressões binárias, unárias e ternárias -->
+
+- `left + right`: Soma;
+- `left - right`: Subtração;
+- `left * right`: Multiplicação;
+- `left / right`: Divisão.
+
+Exemplos:
+`5.5 + 3` | `10 - 4.25 - 2` | `2 * 3.5 * 4`
+`20 / 2.5` | `7.5 + 2 * 3` | `(5 + 2.5) * 3.5`
+`8.5 - 2.25 - 1` | `(4 + 1.5) * (3 - 2.5)`
+`10.5 / (2 + 3.5)` | `(6 - 2.5) * 4 / 2`
+
+
+
+
+
+
+Na seção [Tipos de Dados Primitivos](#221-tipos-de-dados-primitivos), você foi apresentado ao tipo `bool`, que representa os valores `true` ou `false`. A utilidade desse tipo de dado se torna mais visível quando estamos falando de comparação condicional. Por exemplo, na condição `se eu dividir 10 por 2, o resultado será 5?`, qual você acha que seria a resposta? `true` ou `false`?
+Nesse caso, temos o resultado sendo `true`.
+
+<!-- TODO: falar sobre os operadores de comparação -->
 
 
 
