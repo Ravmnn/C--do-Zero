@@ -17,7 +17,9 @@
       - [2.2.2.2: Expressões Condicionais](#2222-expressões-condicionais)
     - [2.1.3: Precedência de Operadores](#213-precedência-de-operadores)
   - [2.2: Código](#22-código)
-    - [2.2.1: Instruções](#221-instruções)
+    - [2.2.1: Instruções de Controle Básicas](#221-instruções-de-controle-básicas)
+      - [2.2.1.1: Instrução `if`](#2211-instrução-if)
+      - [2.2.1.2: Instrução `while`](#2212-instrução-while)
 
 
 
@@ -35,7 +37,7 @@ Por isso, aprender, nem que seja um pouco, a lógica de programação, pode faci
 
 ## 2.1: Fundamentos
 
-Por motivos de simplicidade, irei usar uma *Pseudo Linguagem[^1]*. Para não ficar chamando-a de "pseudo linguagem" toda hora que me referir à linguagem de demonstração específica desse livro, vou nomeá-la de "Psec" (lê-se "Piseq").
+Por motivos de simplicidade, irei usar a linguagem de programação [Lua](https://pt.wikipedia.org/wiki/Lua_(linguagem_de_programa%C3%A7%C3%A3o))[^1], pois é uma linguagem extremamente simples e fácil de entender. Você pode acabar saindo desse livro programando em Lua e C++!
 Durante esse capítulo, vou utilizar bastante frases como "linguagens de programação ..." ou "toda linguagem de programação ..." com o intuito de englobar a **maioria** das linguagens de programação, já que pode haver alguma que não se encaixa na afirmação seguinte.
 
 
@@ -278,7 +280,7 @@ Caso você queira que `10 + 5 * 3` resulte em `45` em vez de `25`, reescreva agr
 
 
 ## 2.2: Código
-### 2.2.1: Instruções
+### 2.2.1: Instruções de Controle Básicas
 
 
 Até aqui, você foi apresentado aos tipos de dados e várias expressões que geram diferentes resultados com base em seus operandos. Expressões são fundamentais, mas você não consegue fazer grandes coisas apenas utilizando elas. É aí que entram as instruções.
@@ -312,20 +314,51 @@ dormir
 
 No exemplo acima[^5], cada linha é uma instrução. Em uma linguagem de programação real, há também instruções que usam mais de uma linha, quando necessário.
 
-Agora vou tornar as coisas mais interessantes, criando um algoritmo que simula a funcionalidade de um carro na vida real:
+Em um programa real, não dá pra ser tão linear assim. Muitas vezes queremos fazer algo apenas quando uma condição é alcançada. As vezes, queremos repetir um pedaço de código pra sempre, enquanto o programa estiver rodando. As instruções responsáveis por realizar os dois comportamentos que acabei de dizer, são o `if` e o `while`, respectivamente.
 
 
-*<small>Irei utilizar inglês a partir de agora, recomendo se acostumar.</small>*
 
-```C++
+#### 2.2.1.1: Instrução `if`
+
+A instrução `if` executa um trecho de código apenas *se* a condição especificada for verdadeira. `if` é provavelmente a mais importante de todas as outras instruções, pois é a única forma de ter um programa que toma decisões. Ela vem junto com outras duas instruções *opcionais* que fazem parte de si: `else` e `else if`, que, ao contrário de `if`, executam código caso a condição do `if` anterior seja falsa. `else if` executa um código *se a condição anterior tiver falhada e a condição atual for atendida*. `else` executa um código *se todas as condições anteriores não tiverem sido atendidas*.
+Utilizando o `if` e suas instruções complementares, podemos criar um pequeno algoritmo que categoriza uma pessoa de acordo com a idade dela:
+
+```Lua
+if idade < 4
+    bebê
+
+else if idade < 12
+    criança
+
+else if idade < 18
+    adolescente
+
+else
+    adulto
+    
+```
+
+*<small>Note que o techo de código acima é utilizado apenas por motivos de demonstração e não representa nenhuma linguagem real.</small>*
+
+No código acima, a instrução `if` vai executar o código `bebê` apenas se a expressão condicional `idade < 4` resultar em `true`. Caso esse não seja o caso, o programa irá checar se a condição `idade < 12` em `else if` é verdadeira. Se for, então o código respectivo à instrução (nesse caso, `criança`) será executado. Se ainda não for o caso, uma outra checagem será feita na condição seguinte. Se todas as condições falharem, o código a ser executa será o que estiver no `else`.
+
+Como disse antes, tanto `else if` quanto `else` são opcionais. A instrução `else if` pode aparecer quantas vezes você quiser após o `if`, enquanto o `else` só pode aparecer uma única vez.
+
+
+
+#### 2.2.1.2: Instrução `while`
+
+A instrução `while`[^6] repete certo trecho de código *enquanto* uma condição for verdadeira. `while` também possui instruções complementares: `continue` e `break`. `continue` volta imediatamente para o início do loop. `break` para o loop imediatamente. Podemos usar o `while` para criar um algoritmo que simula um carro na vida real:
+
+```Lua
 turnCarOn
 
-while carIsOn, repeat:
-    if stopLightIsOn, do
+while carIsOn
+    if stopLightIsOn
         brakeAndStop
-        goBackToBeginOfLoop
+        continue
 
-    if carVelocity < 40:
+    if carVelocity < 40
         accelerate
 ```
 
@@ -345,7 +378,7 @@ while carIsOn, repeat:
 
 
 
-[^1]: *Pseudo* (do grego, pseudes), é um prefixo muito utilizado em muitas palavras. Significa algo falso, fingido; uma mentira. Nesse caso, pseudo linguagem, significaria linguagem falsa, que não existe de fato. Uma pseudo linguagem serve apenas para demonstrar código.
+[^1]: Lua é uma linguagem de progamação brasileira, interpretada, dinamicamente tipada e muito poderosa, embora minimalista. Sua sintaxe é simples e muito fácil de aprender. Hoje em dia, é muito utilizada no desenvolvimento de jogos. Por exemplo, a plataforma Roblox a utiliza em sua game engine como linguagem de scripting.
 
 
 [^2]: ASCII encobre um total de 255 caracteres possíveis. No entanto, vivemos em um mundo onde o alfabeto latino não é o único. Temos uma quantidade espetacular de alfabetos diferentes, cada um contendo uma quantidade variável de caracteres. Para resolver o problema de que não seria possível mapear todos os alfabetos do mundo pelo ASCII, foi criado o [Unicode](https://home.unicode.org/), uma tabela mais universal com o objetivo de tornar possível a utilização de todos os alfabetos do mundo em um computador.
@@ -358,3 +391,6 @@ while carIsOn, repeat:
 
 
 [^5]: Perceba que nas instruções do exemplo, utilizo um estilo de nomenclatura onde a primeira letra de cada palavra (com exceção da primeira palavra) é em maiúscula, enquanto o resto continua em minúsculo. Esses tipos de nomenclatura são muito comuns em linguagens de programação, onde não se pode usar o caractere de espaço ` ` tão livremente. Cada estilo de nomenclatura possui um nome. No caso do estilo utilizado no exemplo, chama-se *Camel Case*. Uma lista dos estilos de nomenclatura pode ser encontrado [aqui](https://en.wikipedia.org/wiki/Naming_convention_(programming))
+
+
+[^6]: Por incrível que pareça, uma das maiores utilidades do `while` é criar um loop infinito (ou um que dure muito tempo). Por exemplo, em jogos, é comum o termo "game loop", que se refere ao `while` que fica executando toda a lógica do jogo de novo e de novo. Caso ainda não tenha percebido, um loop infinito pode ser criado com `while true ...`
