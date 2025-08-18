@@ -11,15 +11,16 @@
 
 - [2: Lógica de Programação](#2-lógica-de-programação)
   - [2.1: Fundamentos](#21-fundamentos)
-    - [2.1.1: Tipos de Dados Primitivos:](#211-tipos-de-dados-primitivos)
+    - [2.1.1: Tipos de Dados Primitivos](#211-tipos-de-dados-primitivos)
     - [2.1.2: Expressões](#212-expressões)
-      - [2.2.2.1: Expressões Aritméticas](#2221-expressões-aritméticas)
-      - [2.2.2.2: Expressões Condicionais](#2222-expressões-condicionais)
+      - [2.1.2.1: Expressões Aritméticas](#2121-expressões-aritméticas)
+      - [2.1.2.2: Expressões Condicionais](#2122-expressões-condicionais)
     - [2.1.3: Precedência de Operadores](#213-precedência-de-operadores)
   - [2.2: Código](#22-código)
     - [2.2.1: Instruções de Controle Básicas](#221-instruções-de-controle-básicas)
       - [2.2.1.1: Instrução `if`](#2211-instrução-if)
       - [2.2.1.2: Instrução `while`](#2212-instrução-while)
+    - [2.2.2: Variáveis](#222-variáveis)
 
 
 
@@ -42,7 +43,7 @@ Durante esse capítulo, vou utilizar bastante frases como "linguagens de program
 
 
 
-### 2.1.1: Tipos de Dados Primitivos:
+### 2.1.1: Tipos de Dados Primitivos
 
 Números são incríveis. Por que?... Computadores entendem apenas duas coisas: números e números. Isso significa que, se queremos representar algo que não possa ser representado por um número (como um texto), devemos dar um jeito de fazer o mesmo conseguir ser representado por um. As cores que você enxerga em uma tela, o texto desse livro, os vários elementos que um jogo pode ter, a interface gráfica de um sistema operacional... Todas essas coisas são representadas internamente por números, mesmo que não pareça. Mais uma pergunta pra você, use alguns segundos da sua vida para pensar em uma resposta: Como você representaria o texto `pedra` usando apenas números?
 
@@ -69,7 +70,7 @@ Os tipos de dados que uma linguagem possui depende dela, embora seja quase certo
 
 Valores como `10`, `4.151`, `true` e `"texto"` também são chamados de *literais*, pois representam valores, literalmente.
 
-Esses tipos de dados são chamados de *primitivos* porque é possível criar outros tipos de dados juntando eles. Toda linguagem de programação possui algum mecanismo que permita a criação de novos tipos. Esse recurso será abordado melhor mais a frente.
+Esses tipos de dados são chamados de *primitivos* porque são a base de todos os outros dados, ou seja, é possível criar outros tipos de dados juntando eles. Toda linguagem de programação possui algum mecanismo que permita a criação de novos tipos. Esse recurso será abordado melhor mais a frente.
 
 
 
@@ -81,7 +82,7 @@ Essa seção é um pouco complexa, leia com atenção e cuidado.
 
 
 
-#### 2.2.2.1: Expressões Aritméticas
+#### 2.1.2.1: Expressões Aritméticas
 
 Bons exemplos de uma expressão seriam cálculos aritméticos:
 
@@ -105,7 +106,7 @@ No trecho `5.5 + 3`, `5.5` e `3` são operandos, enquanto `+` é o operador.
 Note que em expressões como `(5 + 2.5) * 3.5`, são utilizados parênteses. Isso será explicado mais a frente.
 
 
-#### 2.2.2.2: Expressões Condicionais
+#### 2.1.2.2: Expressões Condicionais
 
 Na seção [Tipos de Dados Primitivos](#221-tipos-de-dados-primitivos), você foi apresentado ao tipo `bool`, que representa os valores `true` ou `false`. A utilidade desse tipo de dado se torna mais visível quando estamos falando de comparação condicional. Por exemplo, na condição `se eu dividir 10 por 2, o resultado será 5?`, qual você acha que seria a resposta? `true` ou `false`?
 Nesse caso, temos o resultado sendo `true`.
@@ -248,6 +249,7 @@ Tente visualizar o que acontece na expressão acima e calcule tudo mentalmente!
 
 `32 + 68 == 100`: `true`
 `!false`: `true`
+
 `true && true`: `true`
 
 `9 / 3 * 10 == 30`: `true`
@@ -271,6 +273,8 @@ A ordem no qual expressões são calculadas é chamada de precedência. A preced
 5. `>`, `<`, `>=` e `<=`
 6. `==` e `!=`
 7. `&&` e `||`
+
+*<small>Note que a lista acima está longe de encobrir todas as expressões de uma linguagem real.</small>*
 
 É possível fazer com que uma expressão seja calculada antes de todas as outras usando a expressão de agrupamento `(expression)`. Ela segue a mesma lógica que na matemática: Primeiro resolva os cálculos entre parênteses, depois o resto.
 Caso você queira que `10 + 5 * 3` resulte em `45` em vez de `25`, reescreva agrupando a expressão de soma: `(10 + 5) * 3`.
@@ -314,7 +318,8 @@ dormir
 
 No exemplo acima[^5], cada linha é uma instrução. Em uma linguagem de programação real, há também instruções que usam mais de uma linha, quando necessário.
 
-Em um programa real, não dá pra ser tão linear assim. Muitas vezes queremos fazer algo apenas quando uma condição é alcançada. As vezes, queremos repetir um pedaço de código pra sempre, enquanto o programa estiver rodando. As instruções responsáveis por realizar os dois comportamentos que acabei de dizer, são o `if` e o `while`, respectivamente.
+Em um programa real, não dá pra ser tão linear assim. Programas precisam tomar decisões com base em muitos fatores, realizando certa ação apenas quando uma condição é alcançada. Muitas vezes, também é necessário executar o mesmo pedaço de código muitas vezes em sequência. As principais instruções responsáveis por realizar os dois comportamentos que acabei de dizer (tomada de decisões e loops), são o `if` e o `while`, respectivamente.
+Note que eu as caracterizei como instruções "principais", logo, não são as únicas[^6].
 
 
 
@@ -342,13 +347,13 @@ else
 
 No código acima, a instrução `if` vai executar o código `bebê` apenas se a expressão condicional `idade < 4` resultar em `true`. Caso esse não seja o caso, o programa irá checar se a condição `idade < 12` em `else if` é verdadeira. Se for, então o código respectivo à instrução (nesse caso, `criança`) será executado. Se ainda não for o caso, uma outra checagem será feita na condição seguinte. Se todas as condições falharem, o código a ser executa será o que estiver no `else`.
 
-Como disse antes, tanto `else if` quanto `else` são opcionais. A instrução `else if` pode aparecer quantas vezes você quiser após o `if`, enquanto o `else` só pode aparecer uma única vez.
+Como disse antes, tanto `else if` quanto `else` são opcionais. A instrução `else if` pode aparecer quantas vezes você quiser após o `if`, enquanto o `else` só pode aparecer uma única vez, no final.
 
 
 
 #### 2.2.1.2: Instrução `while`
 
-A instrução `while`[^6] repete certo trecho de código *enquanto* uma condição for verdadeira. `while` também possui instruções complementares: `continue` e `break`. `continue` volta imediatamente para o início do loop. `break` para o loop imediatamente. Podemos usar o `while` para criar um algoritmo que simula um carro na vida real:
+A instrução `while`[^7] repete certo trecho de código *enquanto* uma condição for verdadeira. `while` também possui instruções complementares: `continue` e `break`. `continue` volta imediatamente para o início do loop. `break` para o loop imediatamente. Podemos usar o `while` para criar um algoritmo que simula um carro na vida real:
 
 ```Lua
 turnCarOn
@@ -362,6 +367,22 @@ while carIsOn
         accelerate
 ```
 
+*<small>Código ilustrativo.</small>*
+
+
+
+
+
+### 2.2.2: Variáveis
+
+*Variáveis são locais alocados na memória que armazenam um valor específico...*
+Isso é o que um engenheiro de software provavelmente iria responder se você perguntasse o que é uma variável para ele. Em palavras mais simples, uma variável é um nome que armazena um valor.
+
+Dados precisam ser armazenados em algum lugar para de fato serem úteis. Variáveis cumprem esse papel de forma digna. Caso você queira guardar um valor para processá-lo, ou apenas lê-lo depois, você terá que usar uma variável.
+
+A forma como uma variável funciona em uma linguagem de programação é extremamente variável (haha...). Algumas linguagens o obrigam a definir o tipo de uma variável no momento em que ela é criada, proibindo a atribuição de um valor de tipo diferente (tipagem estática), enquanto outras não se importam (tipagem dinâmica; tipagem será explicado mais a frente). Algumas linguagens usam instruções para criar uma variável, enquanto outras não precisam. Algumas linguagens definem uma variável como imutável, ao menos que se especifique o contrário, no momento em que é criada, enquanto outras definem variáveis como mutáveis por padrão.
+
+Independentemente da forma como uma variável funciona em determinada linguagem de programação, podemos ter uma ideia no geral da forma como se cria uma: `name = value`.
 
 
 
@@ -393,4 +414,7 @@ while carIsOn
 [^5]: Perceba que nas instruções do exemplo, utilizo um estilo de nomenclatura onde a primeira letra de cada palavra (com exceção da primeira palavra) é em maiúscula, enquanto o resto continua em minúsculo. Esses tipos de nomenclatura são muito comuns em linguagens de programação, onde não se pode usar o caractere de espaço ` ` tão livremente. Cada estilo de nomenclatura possui um nome. No caso do estilo utilizado no exemplo, chama-se *Camel Case*. Uma lista dos estilos de nomenclatura pode ser encontrado [aqui](https://en.wikipedia.org/wiki/Naming_convention_(programming))
 
 
-[^6]: Por incrível que pareça, uma das maiores utilidades do `while` é criar um loop infinito (ou um que dure muito tempo). Por exemplo, em jogos, é comum o termo "game loop", que se refere ao `while` que fica executando toda a lógica do jogo de novo e de novo. Caso ainda não tenha percebido, um loop infinito pode ser criado com `while true ...`
+[^6]: A maioria das linguagens possuem outras instruções como `for`, `foreach`, `do ... while` e `loop` no caso de loops; `switch` e `match`, no caso de tomada de decisões. O mais interessante dessas instruções é que seus comportamentos podem ser recriados a partir do (e, em algumas linguagens, são literalmente convertidos) `while` ou `if`. A existência de instruções como essas, que derivam de instruções bases, tem como objetivo aumentar a praticidade e deixar código mais legível.
+
+
+[^7]: Por incrível que pareça, uma das maiores utilidades do `while` é criar um loop infinito (ou um que dure muito tempo). Por exemplo, em jogos, é comum o termo "game loop", que se refere ao `while` que fica executando toda a lógica do jogo de novo e de novo. Caso ainda não tenha percebido, um loop infinito pode ser criado com `while true ...`
