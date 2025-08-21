@@ -38,16 +38,15 @@ Por isso, aprender, nem que seja um pouco, a lógica de programação, pode faci
 
 ## 2.1: Fundamentos
 
-Por motivos de simplicidade, irei usar a linguagem de programação [Lua](https://pt.wikipedia.org/wiki/Lua_(linguagem_de_programa%C3%A7%C3%A3o))[^1], pois é uma linguagem extremamente simples e fácil de entender. Você pode acabar saindo desse livro programando em Lua e C++!
-Durante esse capítulo, vou utilizar bastante frases como "linguagens de programação ..." ou "toda linguagem de programação ..." com o intuito de englobar a **maioria** das linguagens de programação, já que pode haver alguma que não se encaixa na afirmação seguinte.
+Durante esse capítulo, vou utilizar bastante frases como "linguagens de programação ..." ou "toda linguagem de programação ..." com o intuito de englobar a *maioria* das linguagens de programação, já que pode haver alguma que não se encaixa na afirmação seguinte.
 
 
 
 ### 2.1.1: Tipos de Dados Primitivos
 
-Números são incríveis. Por que?... Computadores entendem apenas duas coisas: números e números. Isso significa que, se queremos representar algo que não possa ser representado por um número (como um texto), devemos dar um jeito de fazer o mesmo conseguir ser representado por um. As cores que você enxerga em uma tela, o texto desse livro, os vários elementos que um jogo pode ter, a interface gráfica de um sistema operacional... Todas essas coisas são representadas internamente por números, mesmo que não pareça. Mais uma pergunta pra você, use alguns segundos da sua vida para pensar em uma resposta: Como você representaria o texto `pedra` usando apenas números?
+Números são incríveis. Por que? Computadores entendem apenas duas coisas: números e números. Isso significa que, se queremos representar algo que não possa ser representado por um número (como um texto), devemos dar um jeito de fazer o mesmo conseguir ser representado por um. As cores que você enxerga em uma tela, o texto desse livro, os vários elementos que um jogo pode ter, a interface gráfica de um sistema operacional... Todas essas coisas são representadas internamente por números, mesmo que não pareça. Mais uma pergunta pra você, use alguns segundos da sua vida para pensar em uma resposta: Como você representaria o texto `pedra` usando apenas números?
 
-Se sua resposta foi algo como "Criar uma tabela em que cada número representa uma letra do alfabeto", parabéns, você pensa como um computador. Não podemos representar letras diretamente em um computador, mas podemos usar uma alternativa inteligente e mapear cada caractere do alfabeto à um número. Essa é a abordagem utilizada por todos os computadores internacionalmente para representar letras e textos. [ASCII](https://pt.wikipedia.org/wiki/ASCII) (*American Standard Code for Information Interchange* ou *Código Padrão Americano para o Intercâmbio de Informação*, em português) é uma tabela que mapeia todos os caracteres comuns[^2] latinos à um número. Utilizando esse princípio, o texto da pergunta feita acima poderia ser representado da seguinte maneira, utilizando ASCII:
+Se sua resposta foi algo como "Criar uma tabela em que cada número representa uma letra do alfabeto", parabéns, você pensa como um computador. Não podemos representar letras diretamente em um computador, mas podemos usar uma alternativa inteligente e mapear cada caractere do alfabeto à um número. Essa é a abordagem utilizada por todos os computadores internacionalmente para representar letras e textos. [ASCII](https://pt.wikipedia.org/wiki/ASCII) (*American Standard Code for Information Interchange* ou *Código Padrão Americano para o Intercâmbio de Informação*, em português) é uma tabela que mapeia todos os caracteres comuns[^1] latinos à um número. Utilizando esse princípio, o texto da pergunta feita acima poderia ser representado da seguinte maneira, utilizando ASCII:
 
 
 ```
@@ -58,11 +57,11 @@ p   e   d   r   a
 
 Cores também são representadas utilizando uma combinação de números, sendo o principal formato o [RGB](https://pt.wikipedia.org/wiki/RGB) (Red, Green, Blue), onde a combinação de diferentes intensidades da cor vermelha, verde e azul conseguem resultar em uma variedade astronômica de cores.
 
-Embora tudo em um computador seja representado por números, linguagens de programação atribuem à um valor um tipo específico. Isso é importante porque, se não houvesse uma forma de saber com que tipo de valor estamos trabalhando ao criar um programa, poderíamos acabar tratando um caractere como se fosse um número comum. Imagine o caos que somar dois caracteres, pensando serem números comuns, poderia causar. Por exemplo, no famoso jogo Minecraft, não podemos tratar um animal como um bloco. Da mesma forma, não podemos tratar um número como se fosse um texto[^3], embora ambos sejam números por baixo dos panos.
+Embora tudo em um computador seja representado por números, linguagens de programação atribuem à um valor um tipo específico. Isso é importante porque, se não houvesse uma forma de saber com que tipo de valor estamos trabalhando ao criar um programa, poderíamos acabar tratando um caractere como se fosse um número comum. Imagine o caos que somar dois caracteres, pensando serem números comuns, poderia causar. Por exemplo, no famoso jogo Minecraft, não podemos tratar um animal como um bloco. Da mesma forma, não podemos tratar um número como se fosse um texto[^2], embora ambos sejam números por baixo dos panos.
 Os tipos de dados que uma linguagem possui depende dela, embora seja quase certo que toda linguagem possua os seguintes tipos:
 
 - Integer: Representa um número inteiro, que não possui vírgula, como `10`, `123`, `7`, `-3`, `0`. Geralmente, o nome desse tipo é abreviado para `int`.
-- Float: Representa um número que possui vírgula[^4], como `10.123`, `3.14159`, `-0.0825`
+- Float: Representa um número que possui vírgula[^3], como `10.123`, `3.14159`, `-0.0825`
 - Boolean: Representa valores lógicos que podem ser `true` (verdadeiro) ou `false` (falso). É utilizado para expressar condições. Por exemplo, `o número 4 é igual à soma 2 + 2?` resultaria em `true`. Geralmente abreviado para `bool`.
 - String: Representa texto. Textos em linguagens de programação são colocados entre aspas `"`. Algumas usam aspas simples `'` também. Exemplo: `"Isso é literalmente um texto"`.
 
@@ -316,10 +315,10 @@ dormir
 ```
 
 
-No exemplo acima[^5], cada linha é uma instrução. Em uma linguagem de programação real, há também instruções que usam mais de uma linha, quando necessário.
+No exemplo acima[^4], cada linha é uma instrução. Em uma linguagem de programação real, há também instruções que usam mais de uma linha, quando necessário.
 
 Em um programa real, não dá pra ser tão linear assim. Programas precisam tomar decisões com base em muitos fatores, realizando certa ação apenas quando uma condição é alcançada. Muitas vezes, também é necessário executar o mesmo pedaço de código muitas vezes em sequência. As principais instruções responsáveis por realizar os dois comportamentos que acabei de dizer (tomada de decisões e loops), são o `if` e o `while`, respectivamente.
-Note que eu as caracterizei como instruções "principais", logo, não são as únicas[^6].
+Note que eu as caracterizei como instruções "principais", logo, não são as únicas[^5].
 
 
 
@@ -343,7 +342,7 @@ else
     
 ```
 
-*<small>Note que o techo de código acima é utilizado apenas por motivos de demonstração e não representa nenhuma linguagem real.</small>*
+*<small>Note que o techo de código acima é utilizado apenas por motivos de demonstração e não representa nenhuma linguagem real. Além disso, não esqueça que linguagens de programação são apenas texto e podem ser escritas dentro de arquivos convencionais.</small>*
 
 No código acima, a instrução `if` vai executar o código `bebê` apenas se a expressão condicional `idade < 4` resultar em `true`. Caso esse não seja o caso, o programa irá checar se a condição `idade < 12` em `else if` é verdadeira. Se for, então o código respectivo à instrução (nesse caso, `criança`) será executado. Se ainda não for o caso, uma outra checagem será feita na condição seguinte. Se todas as condições falharem, o código a ser executa será o que estiver no `else`.
 
@@ -353,7 +352,7 @@ Como disse antes, tanto `else if` quanto `else` são opcionais. A instrução `e
 
 #### 2.2.1.2: Instrução `while`
 
-A instrução `while`[^7] repete certo trecho de código *enquanto* uma condição for verdadeira. `while` também possui instruções complementares: `continue` e `break`. `continue` volta imediatamente para o início do loop. `break` para o loop imediatamente. Podemos usar o `while` para criar um algoritmo que simula um carro na vida real:
+A instrução `while`[^6] repete certo trecho de código *enquanto* uma condição for verdadeira. `while` também possui instruções complementares: `continue` e `break`. `continue` volta imediatamente para o início do loop. `break` para o loop imediatamente. Podemos usar o `while` para criar um algoritmo que simula um carro na vida real:
 
 ```Lua
 turnCarOn
@@ -380,9 +379,9 @@ Isso é o que um engenheiro de software provavelmente iria responder se você pe
 
 Dados precisam ser armazenados em algum lugar para de fato serem úteis. Variáveis cumprem esse papel de forma digna. Caso você queira guardar um valor para processá-lo, ou apenas lê-lo depois, você terá que usar uma variável.
 
-A forma como uma variável funciona em uma linguagem de programação é extremamente variável (haha...). Algumas linguagens o obrigam a definir o tipo de uma variável no momento em que ela é criada, proibindo a atribuição de um valor de tipo diferente (tipagem estática), enquanto outras não se importam (tipagem dinâmica; tipagem será explicado mais a frente). Algumas linguagens usam instruções para criar uma variável, enquanto outras não precisam. Algumas linguagens definem uma variável como imutável, ao menos que se especifique o contrário, no momento em que é criada, enquanto outras definem variáveis como mutáveis por padrão.
+A forma como uma variável funciona em uma linguagem de programação é extremamente variável (haha...). Algumas linguagens o obrigam a definir o tipo de uma variável no momento em que ela é criada, proibindo a atribuição de um valor de tipo diferente (tipagem estática), enquanto outras não se importam (tipagem dinâmica. Tipagem será explicado mais a frente). Algumas linguagens usam instruções para criar uma variável, enquanto outras não precisam. Algumas linguagens definem uma variável como imutável, ao menos que se especifique o contrário, no momento em que é criada, enquanto outras definem variáveis como mutáveis por padrão.
 
-Independentemente da forma como uma variável funciona em determinada linguagem de programação, podemos ter uma ideia no geral da forma como se cria uma: `name = value`.
+Independentemente da forma como uma variável funciona em determinada linguagem de programação, podemos ter uma ideia geral da forma como se cria uma: `name = value`.
 
 
 
@@ -399,22 +398,20 @@ Independentemente da forma como uma variável funciona em determinada linguagem 
 
 
 
-[^1]: Lua é uma linguagem de progamação brasileira, interpretada, dinamicamente tipada e muito poderosa, embora minimalista. Sua sintaxe é simples e muito fácil de aprender. Hoje em dia, é muito utilizada no desenvolvimento de jogos. Por exemplo, a plataforma Roblox a utiliza em sua game engine como linguagem de scripting.
+
+[^1]: ASCII encobre um total de 255 caracteres possíveis. No entanto, vivemos em um mundo onde o alfabeto latino não é o único. Temos uma quantidade espetacular de alfabetos diferentes, cada um contendo uma quantidade variável de caracteres. Para resolver o problema de que não seria possível mapear todos os alfabetos do mundo pelo ASCII, foi criado o [Unicode](https://home.unicode.org/), uma tabela mais universal com o objetivo de tornar possível a utilização de todos os alfabetos do mundo em um computador.
 
 
-[^2]: ASCII encobre um total de 255 caracteres possíveis. No entanto, vivemos em um mundo onde o alfabeto latino não é o único. Temos uma quantidade espetacular de alfabetos diferentes, cada um contendo uma quantidade variável de caracteres. Para resolver o problema de que não seria possível mapear todos os alfabetos do mundo pelo ASCII, foi criado o [Unicode](https://home.unicode.org/), uma tabela mais universal com o objetivo de tornar possível a utilização de todos os alfabetos do mundo em um computador.
+[^2]: Sabia que os números que estão no teclado do seu computador são tratados como texto, e não números de fato?
 
 
-[^3]: Sabia que os números que estão no teclado do seu computador são tratados como texto, e não números de fato?
+[^3]: Na maioria das linguagens, a vírgula de um número fracionário é representado por um ponto `.`.
 
 
-[^4]: Na maioria das linguagens, a vírgula de um número fracionário é representado por um ponto `.`.
+[^4]: Perceba que nas instruções do exemplo, utilizo um estilo de nomenclatura onde a primeira letra de cada palavra (com exceção da primeira palavra) é em maiúscula, enquanto o resto continua em minúsculo. Esses tipos de nomenclatura são muito comuns em linguagens de programação, onde não se pode usar o caractere de espaço ` ` tão livremente. Cada estilo de nomenclatura possui um nome. No caso do estilo utilizado no exemplo, chama-se *Camel Case*. Uma lista dos estilos de nomenclatura pode ser encontrado [aqui](https://en.wikipedia.org/wiki/Naming_convention_(programming))
 
 
-[^5]: Perceba que nas instruções do exemplo, utilizo um estilo de nomenclatura onde a primeira letra de cada palavra (com exceção da primeira palavra) é em maiúscula, enquanto o resto continua em minúsculo. Esses tipos de nomenclatura são muito comuns em linguagens de programação, onde não se pode usar o caractere de espaço ` ` tão livremente. Cada estilo de nomenclatura possui um nome. No caso do estilo utilizado no exemplo, chama-se *Camel Case*. Uma lista dos estilos de nomenclatura pode ser encontrado [aqui](https://en.wikipedia.org/wiki/Naming_convention_(programming))
+[^5]: A maioria das linguagens possuem outras instruções como `for`, `foreach`, `do ... while` e `loop` no caso de loops; `switch` e `match`, no caso de tomada de decisões. O mais interessante dessas instruções é que seus comportamentos podem ser recriados a partir do (e, em algumas linguagens, são literalmente convertidos) `while` ou `if`. A existência de instruções como essas, que derivam de instruções bases, tem como objetivo aumentar a praticidade e deixar código mais legível.
 
 
-[^6]: A maioria das linguagens possuem outras instruções como `for`, `foreach`, `do ... while` e `loop` no caso de loops; `switch` e `match`, no caso de tomada de decisões. O mais interessante dessas instruções é que seus comportamentos podem ser recriados a partir do (e, em algumas linguagens, são literalmente convertidos) `while` ou `if`. A existência de instruções como essas, que derivam de instruções bases, tem como objetivo aumentar a praticidade e deixar código mais legível.
-
-
-[^7]: Por incrível que pareça, uma das maiores utilidades do `while` é criar um loop infinito (ou um que dure muito tempo). Por exemplo, em jogos, é comum o termo "game loop", que se refere ao `while` que fica executando toda a lógica do jogo de novo e de novo. Caso ainda não tenha percebido, um loop infinito pode ser criado com `while true ...`
+[^6]: Por incrível que pareça, uma das maiores utilidades do `while` é criar um loop infinito (ou um que dure muito tempo). Por exemplo, em jogos, é comum o termo "game loop", que se refere ao `while` que fica executando toda a lógica do jogo de novo e de novo. Caso ainda não tenha percebido, um loop infinito pode ser criado com `while true ...`
