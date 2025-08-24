@@ -1,4 +1,4 @@
-- [Capítulo Anterior](./lógica%20de%20programação.md)
+- [Capítulo Anterior](./lua.md)
 - [Introdução](../introdução.md)
 - [Índice](../índice.md)
 
@@ -8,11 +8,11 @@
 
 
 
-- [3: C++](#3-c)
+- [4: C++](#4-c)
 
 
 
-# 3: C++
+# 4: C++
 
 ***Em desenvolvimento...***
 
@@ -22,6 +22,6 @@
 
 <br><br>
 
-- [Capítulo Anterior](./lógica%20de%20programação.md)
+- [Capítulo Anterior](./lua.md)
 - [Introdução](../introdução.md)
 - [Índice](../índice.md)
