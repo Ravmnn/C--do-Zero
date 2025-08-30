@@ -72,7 +72,7 @@ Esses tipos de dados são chamados de *primitivos* porque são a base de todos o
 
 ## 2.2: Expressões
 
-Em uma linguagem de programação, *expressão* é tudo aquilo que gera um resultado. Por exemplo, a soma de dois números é uma expressão, pois gera um resultado final. A maioria das expressões utilizam *operadores*, que são identificadores que determinam que tipo de expressão está sendo executada, e *operandos*, que são os valores que serão processados de alguma forma.
+Em uma linguagem de programação, *expressão* é tudo aquilo que gera um resultado. Por exemplo, a soma de dois números é uma expressão, pois gera um resultado final. Valores literais, como `123` e `true` também são expressões. A maioria das expressões utilizam *operadores*, que são identificadores que determinam que tipo de expressão está sendo executada, e *operandos*, que são os valores que serão processados de alguma forma.
 
 Essa seção é um pouco complexa e praticamente um monte de tabelas explicando as expressões mais comuns. Você não precisa necessariamente decorar nada daqui, pois vou tentar aplicar todo o conteúdo a partir daqui no próximo capítulo. De qualquer forma, leia com atenção e cuidado.
 
