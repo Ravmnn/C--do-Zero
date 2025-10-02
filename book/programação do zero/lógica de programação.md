@@ -66,7 +66,7 @@ Os tipos de dados que uma linguagem possui depende dela, embora seja quase certo
 
 Valores como `10`, `4.151`, `true` e `"texto"` também são chamados de *literais*, pois representam valores, literalmente.
 
-Esses tipos de dados são chamados de *primitivos* porque são a base de todos os outros dados, ou seja, é possível criar outros tipos de dados juntando eles. Toda linguagem de programação possui algum mecanismo que permita a criação de novos tipos. Esse recurso será abordado melhor mais a frente.
+Esses tipos de dados são chamados de *primitivos* porque são a base de todos os outros dados, ou seja, é possível criar outros tipos de dados juntando eles. Toda linguagem de programação possui algum mecanismo que permita a criação de novos tipos. Esse recurso será abordado melhor mais a frente (no próximo capítulo).
 
 
 
@@ -234,9 +234,11 @@ Algumas linguagens usam `or` para representar o operador em vez de `||`: `true o
 
 
 
+Ufa! Como disse antes, você não precisa se desesperar em decorar nada daqui, dar uma olhada básica já será o suficiente.
 
 Note que você pode ter várias outras expressões dentro de uma expressão:
 - `(32 + 68 == 100 && !false) != (9 / 3 * 10 == 30)`
+
 
 Tente visualizar o que acontece na expressão acima e calcule tudo mentalmente!
 
@@ -388,8 +390,16 @@ result = x + y
 
 Consegue me dizer qual é o valor da variável `result`?
 
+<details>
+<summary>Resultado:</summary>
+
 No código acima, crio três variáveis: `x`, iniciado com o valor `10`; `y`, com o valor `15`; `result`, com a soma das outras duas variáveis. Aonde o nome de uma variável aparecer, é como se o seu valor fosse substituído no local do nome: `result = 10 + 15`, logo, `result = 25`.
 Simples, não?
+
+</details>
+
+<br><br>
+
 Variáveis serão melhor abordadas quando começarmos a usar uma linguagem real, que será Lua.
 
 
@@ -444,7 +454,7 @@ Creio que com esta pequena introdução você esteja preparado para ir pro próx
 [^4]: Perceba que nas instruções do exemplo, utilizo um estilo de nomenclatura onde a primeira letra de cada palavra (com exceção da primeira palavra) é em maiúscula, enquanto o resto continua em minúsculo. Esses tipos de nomenclatura são muito comuns em linguagens de programação, onde não se pode usar o caractere de espaço ` ` tão livremente. Cada estilo de nomenclatura possui um nome. No caso do estilo utilizado no exemplo, chama-se *Camel Case*. Uma lista dos estilos de nomenclatura pode ser encontrado [aqui](https://en.wikipedia.org/wiki/Naming_convention_(programming)).
 
 
-[^5]: A maioria das linguagens possuem outras instruções como `for`, `foreach`, `do ... while` e `loop` no caso de loops; `switch` e `match`, no caso de tomada de decisões. O mais interessante dessas instruções é que seus comportamentos podem ser recriados a partir do (e, em algumas linguagens, são literalmente convertidos) `while` ou `if`. A existência de instruções como essas, que derivam de instruções bases, tem como objetivo aumentar a praticidade e deixar código mais legível.
+[^5]: A maioria das linguagens possuem outras instruções como `for`, `foreach`, `do ... while` e `loop` no caso de loops; `switch` e `match`, no caso de tomada de decisões. O mais interessante dessas instruções é que seus comportamentos podem ser recriados a partir do (e, em algumas linguagens, são literalmente convertidos para) `while` ou `if`. A existência de instruções como essas, que derivam de instruções bases, tem como objetivo aumentar a praticidade e deixar código mais legível.
 
 
 [^6]: Uma Pseudo Linguagem é apenas um texto que se assemelha a alguma linguagem real, com o propósito de demonstrar exemplos de código. Pseudo é uma palavra de origem grega que significa "falso", "fingido" ou "de mentira". No exemplo de "Pseudo Linguagem", sua tradução seria "Linguagem Falsa".

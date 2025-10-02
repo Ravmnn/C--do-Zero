@@ -17,6 +17,7 @@
     - [3.1.4: Sistema de Arquivos](#314-sistema-de-arquivos)
   - [3.2: A Linguagem Lua](#32-a-linguagem-lua)
     - [3.2.1: Mostrando Coisas Numa Tela](#321-mostrando-coisas-numa-tela)
+    - [3.2.2: Variáveis e Escopo](#322-variáveis-e-escopo)
 
 
 
@@ -122,6 +123,29 @@ Vamos desconstruir a linha de código acima:
 3. `"Mão na massa!"`: Como foi dito em [Lógica de Programação - Tipos de Dados Primitivos](lógica%20de%20programação.md#21-tipos-de-dados-primitivos), é uma string (texto), pois está entre aspas `"`.
 
 Você pode por qualquer [expressão](lógica%20de%20programação.md#22-expressões) entre o `(` e `)` de `print`. Experimente inserir expressões diferentes, como soma de números, expressões condicionais ou valores literais em `print`s diferentes. Não se esqueça que prática é extremamente importante para aprender a programar, não seja tímido!
+
+
+
+### 3.2.2: Variáveis e Escopo
+
+
+
+Em Lua, a criação e utilização de variáveis é bem simples e direto: `local <name> = <value>`. O uso do `local` é apenas quando estamos criando a variável, então não é necessário o uso dela ao modificar o valor da variável, que segue o formato `<name> = <value>`.
+
+```Lua
+local x = 10
+local y = 5
+
+local result = x * y
+
+print(result)
+```
+
+*<small>Não se esqueça que para executar, utilize o comando `lua <arquivo>`</small>.*
+
+O código acima gera, no terminal, o valor `50`.
+
+No [Capítulo Anterior](./lógica%20de%20programação.md), que trata de lógica de programação, você deve ter visto a parte que introduz as variáveis. A respeito das variáveis em si, não há nada de novo em relação do que foi dito lá, com exceção da nova palavra-chave `local`, que deve ser colocada antes do nome da variável. Note, no entanto, que se você remover a mesma palavra, o código irá executar sem problemas. Na realidade, o uso do `local` é apenas uma convenção, isso é, uma recomendação na hora de se criar uma variável. O porquê de fazer isso está relacionado a um conceito que ainda não lhe foi introduzido: Escopo, que será explicado mais a frente.
 
 
 
