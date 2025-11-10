@@ -1,5 +1,4 @@
 - [Capítulo Anterior](./lua.md)
-- [Introdução](../introdução.md)
 - [Índice](../índice.md)
 
 <br><br>
@@ -23,5 +22,4 @@
 <br><br>
 
 - [Capítulo Anterior](./lua.md)
-- [Introdução](../introdução.md)
 - [Índice](../índice.md)

@@ -1,6 +1,5 @@
 - [Próximo Capítulo](./lua.md)
 - [Capítulo Anterior](./ponto%20de%20entrada.md)
-- [Introdução](../introdução.md)
 - [Índice](../índice.md)
 
 <br><br>
@@ -434,7 +433,6 @@ Creio que com esta pequena introdução você esteja preparado para ir pro próx
 
 - [Próximo Capítulo](./lua.md)
 - [Capítulo Anterior](./ponto%20de%20entrada.md)
-- [Introdução](../introdução.md)
 - [Índice](../índice.md)
 
 
